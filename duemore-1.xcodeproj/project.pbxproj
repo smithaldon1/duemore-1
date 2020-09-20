@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E0B5DA82516F9100010C6ED /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0B5DA72516F9100010C6ED /* LoginView.swift */; };
+		2E35FC7E2517791600A2ABF8 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E35FC7D2517791600A2ABF8 /* RegisterView.swift */; };
 		2E9D79C82512A3EB00113A51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9D79C72512A3EB00113A51 /* AppDelegate.swift */; };
 		2E9D79CA2512A3EB00113A51 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9D79C92512A3EB00113A51 /* SceneDelegate.swift */; };
 		2E9D79CC2512A3EB00113A51 /* InboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9D79CB2512A3EB00113A51 /* InboxView.swift */; };
@@ -15,10 +17,11 @@
 		2E9D79D42512A3EE00113A51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E9D79D22512A3EE00113A51 /* LaunchScreen.storyboard */; };
 		2E9D79DC2512A50400113A51 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9D79DB2512A50400113A51 /* AppView.swift */; };
 		2E9D79E22512AA3500113A51 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9D79E12512AA3500113A51 /* ContentView.swift */; };
-		2E9D79E42512B08300113A51 /* SlidingMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9D79E32512B08300113A51 /* SlidingMenuView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E0B5DA72516F9100010C6ED /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		2E35FC7D2517791600A2ABF8 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		2E9D79C42512A3EB00113A51 /* duemore-1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "duemore-1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E9D79C72512A3EB00113A51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2E9D79C92512A3EB00113A51 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -29,7 +32,6 @@
 		2E9D79D52512A3EE00113A51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E9D79DB2512A50400113A51 /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
 		2E9D79E12512AA3500113A51 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		2E9D79E32512B08300113A51 /* SlidingMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlidingMenuView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +73,8 @@
 				2E9D79CF2512A3EE00113A51 /* Preview Content */,
 				2E9D79DB2512A50400113A51 /* AppView.swift */,
 				2E9D79E12512AA3500113A51 /* ContentView.swift */,
-				2E9D79E32512B08300113A51 /* SlidingMenuView.swift */,
+				2E0B5DA72516F9100010C6ED /* LoginView.swift */,
+				2E35FC7D2517791600A2ABF8 /* RegisterView.swift */,
 			);
 			path = "duemore-1";
 			sourceTree = "<group>";
@@ -155,11 +158,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E0B5DA82516F9100010C6ED /* LoginView.swift in Sources */,
 				2E9D79DC2512A50400113A51 /* AppView.swift in Sources */,
 				2E9D79E22512AA3500113A51 /* ContentView.swift in Sources */,
+				2E35FC7E2517791600A2ABF8 /* RegisterView.swift in Sources */,
 				2E9D79C82512A3EB00113A51 /* AppDelegate.swift in Sources */,
 				2E9D79CA2512A3EB00113A51 /* SceneDelegate.swift in Sources */,
-				2E9D79E42512B08300113A51 /* SlidingMenuView.swift in Sources */,
 				2E9D79CC2512A3EB00113A51 /* InboxView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
