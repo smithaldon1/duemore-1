@@ -8,12 +8,6 @@
 
 import SwiftUI
 
-struct InboxItem: Identifiable {
-    var id = UUID()
-    var title: String
-    var note: String
-}
-
 struct InboxView: View {
     @State var showMenu = false
     
@@ -31,7 +25,7 @@ struct InboxView: View {
         return NavigationView {
             GeometryReader { geometry in
                 ZStack (alignment: .leading) {
-                    InboxRowView(showMenu: self.$showMenu)
+                    MainView(showMenu: self.$showMenu)
                         .frame(width: geometry.size.width, height: geometry.size.height)
                         .offset(x: self.showMenu ? geometry.size.width/2 : 0)
                         .disabled(self.showMenu ? true : false)
@@ -54,24 +48,6 @@ struct InboxView: View {
                                             .font(.system(size: 25))
                                     }
             ))
-        }
-    }
-}
-
-struct InboxRowView: View {
-    @Binding var showMenu: Bool
-    @State var inboxTitle = ""
-    @State var inboxNote = ""
-//    var inboxItem: InboxItem
-    
-    let inboxItems = [
-        InboxItem(title: "A", note: "Fuck this"),
-        InboxItem(title: "New comic idea", note: "Based on Marvel")
-    ]
-    
-    var body: some View {
-        VStack{
-            Text("inboxItem.note")
         }
     }
 }

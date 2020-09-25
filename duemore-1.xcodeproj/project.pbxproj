@@ -20,6 +20,7 @@
 		2E229941251CF81500AF0D34 /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2E229937251CF81500AF0D34 /* OpenSans-Italic.ttf */; };
 		2E229946251CFA9000AF0D34 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E229945251CFA9000AF0D34 /* MenuView.swift */; };
 		2E22994A251D5E8200AF0D34 /* InboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E229949251D5E8200AF0D34 /* InboxView.swift */; };
+		2E229952251D749D00AF0D34 /* InboxItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E229951251D749D00AF0D34 /* InboxItem.swift */; };
 		2E35FC7E2517791600A2ABF8 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E35FC7D2517791600A2ABF8 /* RegisterView.swift */; };
 		2E9D79C82512A3EB00113A51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9D79C72512A3EB00113A51 /* AppDelegate.swift */; };
 		2E9D79CA2512A3EB00113A51 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9D79C92512A3EB00113A51 /* SceneDelegate.swift */; };
@@ -32,6 +33,7 @@
 
 /* Begin PBXFileReference section */
 		2E0B5DA72516F9100010C6ED /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		2E185D1F251D77C80021EE65 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		2E22992E251CF81400AF0D34 /* OpenSans-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
 		2E22992F251CF81400AF0D34 /* OpenSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBold.ttf"; sourceTree = "<group>"; };
 		2E229930251CF81400AF0D34 /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
@@ -44,6 +46,7 @@
 		2E229937251CF81500AF0D34 /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Italic.ttf"; sourceTree = "<group>"; };
 		2E229945251CFA9000AF0D34 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		2E229949251D5E8200AF0D34 /* InboxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxView.swift; sourceTree = "<group>"; };
+		2E229951251D749D00AF0D34 /* InboxItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxItem.swift; sourceTree = "<group>"; };
 		2E35FC7D2517791600A2ABF8 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		2E9D79C42512A3EB00113A51 /* duemore-1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "duemore-1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E9D79C72512A3EB00113A51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +70,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E185D1E251D77C80021EE65 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2E185D1F251D77C80021EE65 /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		2E229943251CF9B400AF0D34 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -84,11 +95,33 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		2E22994F251D746700AF0D34 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2E229951251D749D00AF0D34 /* InboxItem.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2E229950251D747000AF0D34 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2E9D79DB2512A50400113A51 /* AppView.swift */,
+				2E9D79E12512AA3500113A51 /* ContentView.swift */,
+				2E0B5DA72516F9100010C6ED /* LoginView.swift */,
+				2E35FC7D2517791600A2ABF8 /* RegisterView.swift */,
+				2E229945251CFA9000AF0D34 /* MenuView.swift */,
+				2E229949251D5E8200AF0D34 /* InboxView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		2E9D79BB2512A3EB00113A51 = {
 			isa = PBXGroup;
 			children = (
 				2E9D79C62512A3EB00113A51 /* duemore-1 */,
 				2E9D79C52512A3EB00113A51 /* Products */,
+				2E185D1E251D77C80021EE65 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +136,8 @@
 		2E9D79C62512A3EB00113A51 /* duemore-1 */ = {
 			isa = PBXGroup;
 			children = (
+				2E229950251D747000AF0D34 /* Views */,
+				2E22994F251D746700AF0D34 /* Models */,
 				2E229943251CF9B400AF0D34 /* Resources */,
 				2E9D79C72512A3EB00113A51 /* AppDelegate.swift */,
 				2E9D79C92512A3EB00113A51 /* SceneDelegate.swift */,
@@ -110,12 +145,6 @@
 				2E9D79D22512A3EE00113A51 /* LaunchScreen.storyboard */,
 				2E9D79D52512A3EE00113A51 /* Info.plist */,
 				2E9D79CF2512A3EE00113A51 /* Preview Content */,
-				2E9D79DB2512A50400113A51 /* AppView.swift */,
-				2E9D79E12512AA3500113A51 /* ContentView.swift */,
-				2E0B5DA72516F9100010C6ED /* LoginView.swift */,
-				2E35FC7D2517791600A2ABF8 /* RegisterView.swift */,
-				2E229945251CFA9000AF0D34 /* MenuView.swift */,
-				2E229949251D5E8200AF0D34 /* InboxView.swift */,
 			);
 			path = "duemore-1";
 			sourceTree = "<group>";
@@ -216,6 +245,7 @@
 				2E35FC7E2517791600A2ABF8 /* RegisterView.swift in Sources */,
 				2E22994A251D5E8200AF0D34 /* InboxView.swift in Sources */,
 				2E9D79C82512A3EB00113A51 /* AppDelegate.swift in Sources */,
+				2E229952251D749D00AF0D34 /* InboxItem.swift in Sources */,
 				2E9D79CA2512A3EB00113A51 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
