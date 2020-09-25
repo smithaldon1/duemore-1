@@ -8,6 +8,10 @@
 
 import SwiftUI
 
+extension Color {
+    static let purp = Color(red: 102/255, green: 22/255, blue: 156/255)
+}
+
 struct ContentView: View {
     
     @State var showMenu = false
@@ -46,7 +50,7 @@ struct ContentView: View {
                                     }
                                 }) {
                                     Image(systemName: "line.horizontal.3")
-                                        .imageScale(.large)
+                                        .font(.system(size: 25))
                                     }
                                 ))
         }

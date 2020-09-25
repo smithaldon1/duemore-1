@@ -14,15 +14,16 @@ extension LinearGradient {
     }
 }
 
+
 struct PressedButtonStyle: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
-        .padding(10)
+        .padding(5)
         .background(
             Group {
                 if configuration.isPressed {
                     RoundedRectangle(cornerRadius: 25)
-                        .fill(Color.offWhite)
+                        .fill(Color.white)
                         .overlay(
                             RoundedRectangle(cornerRadius: 25)
                                 .stroke(Color.gray, lineWidth: 4)
@@ -39,9 +40,10 @@ struct PressedButtonStyle: ButtonStyle {
                         )
                 } else {
                     RoundedRectangle(cornerRadius: 25)
-                        .fill(Color.offWhite)
-                        .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
-                        .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
+                        .fill(Color.white)
+                        .shadow(color: Color.black.opacity(0.08), radius: 5, x: 5, y: 5)
+                        .shadow(color: Color.white.opacity(0.65), radius: 5, x: -5, y: -5)
+                        .blur(radius: 1.0)
                 }
             }
         )
@@ -54,104 +56,84 @@ struct RegisterView: View {
     @State var confirmPassword = ""
     
     var body: some View {
-        ZStack {
-            Color.offWhite
-            VStack {
-                Group {
-                    Text("Due More")
-                        .font(.system(size: 50, weight: .bold, design: .serif))
-                    Spacer()
-                        .frame(height: 50.0)
-                    Text("Register to get started!")
-                        .font(.system(size: 25, weight: .light, design: .rounded))
-                    Spacer()
-                        .frame(height: 50.0)
-                }
-                HStack {
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    ZStack {
-                        RoundedRectangle(cornerRadius: 25)
-                            .fill(Color.offWhite)
-                            .frame(height: 35)
-                            .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
-                            .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
-                        TextField(" Email", text: $email)
-                            .font(.system(size: 17, weight: .regular, design: .default))
+        GeometryReader { geometry in
+            ZStack {
+                Color.white
+                VStack {
+                    VStack {
+                        Text("Due More")
+                            .font(Font.custom("OpenSans-BoldItalic", size: 55))
+                            .frame(width: geometry.size.width, height: geometry.size.height/10, alignment: .top)
+                        Text("Register to get started!")
+                            .font(Font.custom("OpenSans-SemiBold", size: 24))
+                            .frame(width: geometry.size.width, height: geometry.size.height/10, alignment: .center)
+                    }
+                    HStack {
+                        ZStack {
+                            RoundedRectangle(cornerRadius: 25)
+                                .fill(Color.white)
+                                .shadow(color: Color.black.opacity(0.08), radius: 5, x: 5, y: 5)
+                                .shadow(color: Color.white.opacity(0.65), radius: 5, x: -5, y: -5)
+                                .blur(radius: 1.0)
+                                .frame(width: geometry.size.width/1.1, height: 50, alignment: .center)
+                            TextField(" Email", text: $email)
+                                .padding()
+                                .font(Font.custom("OpenSans-Regular", size: 18))
+                                .frame(width: geometry.size.width/1.1, height: 50, alignment: .center)
+                        }
+                    }.padding()
+                    HStack {
+                        ZStack {
+                            RoundedRectangle(cornerRadius: 25)
+                                .fill(Color.white)
+                                .frame(width: geometry.size.width/1.1, height: 50, alignment: .center)
+                                .shadow(color: Color.black.opacity(0.08), radius: 5, x: 5, y: 5)
+                                .shadow(color: Color.white.opacity(0.65), radius: 5, x: -5, y: -5)
+                                .blur(radius: 1.0)
+                            SecureField(" Password", text: $password)
+                                .font(Font.custom("OpenSans-Regular", size: 18))
+                                .padding()
+                                .frame(width: geometry.size.width/1.1, height: 50, alignment: .center)
+                                
+                        }
+                    }.padding()
+                    HStack {
+                        ZStack {
+                            RoundedRectangle(cornerRadius: 25)
+                                .fill(Color.white)
+                                .frame(width: geometry.size.width/1.1, height: 50, alignment: .center)
+                                .shadow(color: Color.black.opacity(0.08), radius: 5, x: 5, y: 5)
+                                .shadow(color: Color.white.opacity(0.65), radius: 5, x: -5, y: -5)
+                                .blur(radius: 1.0)
+                            SecureField(" Confirm Password", text: $confirmPassword)
+                                .font(Font.custom("OpenSans-Regular", size: 18))
+                                .padding()
+                                .frame(width: geometry.size.width/1.1, height: 50, alignment: .center)
+                        }
+                    }.padding()
+                    HStack {
+                        Text("Already have an account?")
+                            .font(Font.custom("OpenSans-Regular", size: 16))
+                        Button(action: {
+                            print("Login Here tapped")
+                        }) {
+                            Text("Login Here")
+                                .font(Font.custom("OpenSans-Bold", size: 16))
+                        }
+                    }
+                    Button(action: {
+                            print("Register")
+                    }) {
+                        Text("Register!")
                             .padding()
-                            .frame(height: 35, alignment: .center)
+                            .font(Font.custom("OpenSans-Regular", size: 20))
                     }
-                    
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
+                    .buttonStyle(PressedButtonStyle())
                 }
-                Spacer()
-                    .frame(height: 25.0)
-                HStack {
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    ZStack {
-                        RoundedRectangle(cornerRadius: 25)
-                            .fill(Color.offWhite)
-                            .frame(height: 35)
-                            .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
-                            .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
-                        SecureField(" Password", text: $password)
-                        .font(.system(size: 17, weight: .regular, design: .default))
-                        .padding()
-                        .frame(height: 35, alignment: .center)
-                    }
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                }
-                Spacer()
-                    .frame(height: 25.0)
-                HStack {
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    ZStack {
-                        RoundedRectangle(cornerRadius: 25)
-                            .fill(Color.offWhite)
-                            .frame(height: 35)
-                            .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
-                            .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
-                        SecureField(" Confirm Password", text: $confirmPassword)
-                        .font(.system(size: 17, weight: .regular, design: .default))
-                        .padding()
-                        .frame(height: 35, alignment: .center)
-                    }
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                }
-                HStack {
-                    Text("Already have an account?")
-                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
-                        Text("Login Here")
-                            .fontWeight(.bold)
-                    }
-                }.frame(height: 75)
-                Button(action: {print("Register")}) {
-                    Text("Register!")
-                        .padding()
-                        .font(.system(size: 18, weight: .regular, design: .default))
-                }
-                .buttonStyle(PressedButtonStyle())
             }
+            .foregroundColor(.purp)
+            .edgesIgnoringSafeArea(.all)
         }
-        .foregroundColor(Color(#colorLiteral(red: 0.6039618254, green: 0.4309099019, blue: 0.7170007825, alpha: 1)))
-        .edgesIgnoringSafeArea(.all)
     }
 }
 
