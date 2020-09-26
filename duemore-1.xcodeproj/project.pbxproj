@@ -21,6 +21,7 @@
 		2E229946251CFA9000AF0D34 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E229945251CFA9000AF0D34 /* MenuView.swift */; };
 		2E22994A251D5E8200AF0D34 /* InboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E229949251D5E8200AF0D34 /* InboxView.swift */; };
 		2E229952251D749D00AF0D34 /* InboxItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E229951251D749D00AF0D34 /* InboxItem.swift */; };
+		2E32FFB4251D813300E538D4 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2E32FFB2251D813300E538D4 /* Model.xcdatamodeld */; };
 		2E35FC7E2517791600A2ABF8 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E35FC7D2517791600A2ABF8 /* RegisterView.swift */; };
 		2E9D79C82512A3EB00113A51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9D79C72512A3EB00113A51 /* AppDelegate.swift */; };
 		2E9D79CA2512A3EB00113A51 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9D79C92512A3EB00113A51 /* SceneDelegate.swift */; };
@@ -29,6 +30,7 @@
 		2E9D79D42512A3EE00113A51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E9D79D22512A3EE00113A51 /* LaunchScreen.storyboard */; };
 		2E9D79DC2512A50400113A51 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9D79DB2512A50400113A51 /* AppView.swift */; };
 		2E9D79E22512AA3500113A51 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9D79E12512AA3500113A51 /* ContentView.swift */; };
+		2EA20503251F81F800853D9F /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA20502251F81F800853D9F /* DashboardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +49,7 @@
 		2E229945251CFA9000AF0D34 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		2E229949251D5E8200AF0D34 /* InboxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxView.swift; sourceTree = "<group>"; };
 		2E229951251D749D00AF0D34 /* InboxItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxItem.swift; sourceTree = "<group>"; };
+		2E32FFB3251D813300E538D4 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		2E35FC7D2517791600A2ABF8 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		2E9D79C42512A3EB00113A51 /* duemore-1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "duemore-1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E9D79C72512A3EB00113A51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +60,7 @@
 		2E9D79D52512A3EE00113A51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E9D79DB2512A50400113A51 /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
 		2E9D79E12512AA3500113A51 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2EA20502251F81F800853D9F /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +116,7 @@
 				2E35FC7D2517791600A2ABF8 /* RegisterView.swift */,
 				2E229945251CFA9000AF0D34 /* MenuView.swift */,
 				2E229949251D5E8200AF0D34 /* InboxView.swift */,
+				2EA20502251F81F800853D9F /* DashboardView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -145,6 +150,7 @@
 				2E9D79D22512A3EE00113A51 /* LaunchScreen.storyboard */,
 				2E9D79D52512A3EE00113A51 /* Info.plist */,
 				2E9D79CF2512A3EE00113A51 /* Preview Content */,
+				2E32FFB2251D813300E538D4 /* Model.xcdatamodeld */,
 			);
 			path = "duemore-1";
 			sourceTree = "<group>";
@@ -244,7 +250,9 @@
 				2E9D79E22512AA3500113A51 /* ContentView.swift in Sources */,
 				2E35FC7E2517791600A2ABF8 /* RegisterView.swift in Sources */,
 				2E22994A251D5E8200AF0D34 /* InboxView.swift in Sources */,
+				2EA20503251F81F800853D9F /* DashboardView.swift in Sources */,
 				2E9D79C82512A3EB00113A51 /* AppDelegate.swift in Sources */,
+				2E32FFB4251D813300E538D4 /* Model.xcdatamodeld in Sources */,
 				2E229952251D749D00AF0D34 /* InboxItem.swift in Sources */,
 				2E9D79CA2512A3EB00113A51 /* SceneDelegate.swift in Sources */,
 			);
@@ -440,6 +448,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2E32FFB2251D813300E538D4 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2E32FFB3251D813300E538D4 /* Model.xcdatamodel */,
+			);
+			currentVersion = 2E32FFB3251D813300E538D4 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 2E9D79BC2512A3EB00113A51 /* Project object */;
 }

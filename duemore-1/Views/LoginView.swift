@@ -62,7 +62,7 @@ struct LoginView: View {
                             Text("Register Here")
                                 .fontWeight(.bold)
                         }
-                    }
+                    }.padding()
                     Button(action: {
                         print("Login button pressed")
                     }) {
