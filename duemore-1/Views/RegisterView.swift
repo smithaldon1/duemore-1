@@ -14,7 +14,6 @@ extension LinearGradient {
     }
 }
 
-
 struct PressedButtonStyle: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
@@ -47,6 +46,42 @@ struct PressedButtonStyle: ButtonStyle {
                 }
             }
         )
+    }
+}
+
+enum AuthState {
+    case login, register
+}
+
+struct AuthView: View {
+    @State var authState = AuthState.login
+    
+    var body: some View {
+        Group {
+            if authState == .login {
+                LoginView()
+            } else {
+                RegisterView()
+                HStack {
+                    Text("Already have an account?")
+                        .font(Font.custom("OpenSans-Regular", size: 16))
+                    Button(action: {
+                        self.authState = AuthState.login
+                    }) {
+                        Text("Login Here")
+                            .font(Font.custom("OpenSans-Bold", size: 16))
+                    }
+                }
+                Button(action: {
+                        print("Register")
+                }) {
+                    Text("Register!")
+                        .padding()
+                        .font(Font.custom("OpenSans-Regular", size: 20))
+                }
+                .buttonStyle(PressedButtonStyle())
+            }
+        }
     }
 }
 
@@ -115,7 +150,7 @@ struct RegisterView: View {
                         Text("Already have an account?")
                             .font(Font.custom("OpenSans-Regular", size: 16))
                         Button(action: {
-                            print("Login Here tapped")
+                            print("Fuck")
                         }) {
                             Text("Login Here")
                                 .font(Font.custom("OpenSans-Bold", size: 16))
@@ -137,8 +172,81 @@ struct RegisterView: View {
     }
 }
 
+struct LoginView: View {
+    @State var email = ""
+    @State var password = ""
+    @State var authState = AuthState.login
+    
+    var body: some View {
+        GeometryReader { geometry in
+            ZStack (alignment: .bottom){
+                Color.white
+                VStack {
+                    Spacer()
+                    VStack {
+                        Text("Due More")
+                            .font(Font.custom("OpenSans-BoldItalic", size: 55))
+                            .frame(width: geometry.size.width, height: geometry.size.height/10, alignment: .top)
+                        Text("Login to Continue!")
+                            .font(Font.custom("OpenSans-SemiBold", size: 24))
+                            .frame(width: geometry.size.width, height: geometry.size.height/10, alignment: .center)
+                    }
+                    HStack {
+                        ZStack {
+                            RoundedRectangle(cornerRadius: 25)
+                                .fill(Color.white)
+                                .shadow(color: Color.black.opacity(0.08), radius: 5, x: 5, y: 5)
+                                .shadow(color: Color.white.opacity(0.65), radius: 5, x: -5, y: -5)
+                                .blur(radius: 1.0)
+                                .frame(width: geometry.size.width/1.1, height: 50, alignment: .center)
+                            TextField(" Email", text: $email)
+                                .padding()
+                                .font(Font.custom("OpenSans-Regular", size: 18))
+                                .frame(width: geometry.size.width/1.1, height: 50, alignment: .center)
+                        }
+                    }.padding()
+                    HStack {
+                        ZStack {
+                            RoundedRectangle(cornerRadius: 25)
+                                .fill(Color.white)
+                                .shadow(color: Color.black.opacity(0.08), radius: 5, x: 5, y: 5)
+                                .shadow(color: Color.white.opacity(0.65), radius: 5, x: -5, y: -5)
+                                .blur(radius: 1.0)
+                                .frame(width: geometry.size.width/1.1, height: 50, alignment: .center)
+                            SecureField(" Password", text: $password)
+                                .padding()
+                                .font(Font.custom("OpenSans-Regular", size: 18))
+                                .frame(width: geometry.size.width/1.1, height: 50, alignment: .center)
+                        }
+                    }.padding()
+                    HStack {
+                        Text("Don't have an account?")
+                            .font(Font.custom("OpenSans-Regular", size: 16))
+                        Button(action: {
+                            self.authState = AuthState.register
+                        }) {
+                            Text("Register Here")
+                                .font(Font.custom("OpenSans-Bold", size: 18))
+                        }
+                    }.padding()
+                    Button(action: {
+                        print("Login button pressed")
+                    }) {
+                        Text("Login!")
+                            .padding()
+                            .font(Font.custom("OpenSans-Regular", size: 20))
+                    }
+                    .buttonStyle(PressedButtonStyle())
+                    Spacer()
+                }
+            }
+            .foregroundColor(.purp)
+        }
+    }
+}
+
 struct RegisterView_Previews: PreviewProvider {
     static var previews: some View {
-        RegisterView()
+        AuthView()
     }
 }

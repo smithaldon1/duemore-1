@@ -10,6 +10,7 @@ import SwiftUI
 
 extension Color {
     static let purp = Color(red: 102/255, green: 22/255, blue: 156/255)
+    static let blu = Color(red: 34/255, green: 57/255, blue: 149/255)
 }
 
 struct ContentView: View {

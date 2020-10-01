@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2E0B5DA82516F9100010C6ED /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0B5DA72516F9100010C6ED /* LoginView.swift */; };
 		2E229938251CF81500AF0D34 /* OpenSans-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2E22992E251CF81400AF0D34 /* OpenSans-SemiBoldItalic.ttf */; };
 		2E229939251CF81500AF0D34 /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2E22992F251CF81400AF0D34 /* OpenSans-SemiBold.ttf */; };
 		2E22993A251CF81500AF0D34 /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2E229930251CF81400AF0D34 /* OpenSans-BoldItalic.ttf */; };
@@ -31,10 +30,10 @@
 		2E9D79DC2512A50400113A51 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9D79DB2512A50400113A51 /* AppView.swift */; };
 		2E9D79E22512AA3500113A51 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9D79E12512AA3500113A51 /* ContentView.swift */; };
 		2EA20503251F81F800853D9F /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA20502251F81F800853D9F /* DashboardView.swift */; };
+		2EA20506251F8C7D00853D9F /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA20505251F8C7D00853D9F /* Task.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2E0B5DA72516F9100010C6ED /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		2E185D1F251D77C80021EE65 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		2E22992E251CF81400AF0D34 /* OpenSans-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
 		2E22992F251CF81400AF0D34 /* OpenSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -61,6 +60,7 @@
 		2E9D79DB2512A50400113A51 /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
 		2E9D79E12512AA3500113A51 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2EA20502251F81F800853D9F /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		2EA20505251F8C7D00853D9F /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				2E229951251D749D00AF0D34 /* InboxItem.swift */,
+				2EA20505251F8C7D00853D9F /* Task.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -112,7 +113,6 @@
 			children = (
 				2E9D79DB2512A50400113A51 /* AppView.swift */,
 				2E9D79E12512AA3500113A51 /* ContentView.swift */,
-				2E0B5DA72516F9100010C6ED /* LoginView.swift */,
 				2E35FC7D2517791600A2ABF8 /* RegisterView.swift */,
 				2E229945251CFA9000AF0D34 /* MenuView.swift */,
 				2E229949251D5E8200AF0D34 /* InboxView.swift */,
@@ -244,10 +244,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E0B5DA82516F9100010C6ED /* LoginView.swift in Sources */,
 				2E229946251CFA9000AF0D34 /* MenuView.swift in Sources */,
 				2E9D79DC2512A50400113A51 /* AppView.swift in Sources */,
 				2E9D79E22512AA3500113A51 /* ContentView.swift in Sources */,
+				2EA20506251F8C7D00853D9F /* Task.swift in Sources */,
 				2E35FC7E2517791600A2ABF8 /* RegisterView.swift in Sources */,
 				2E22994A251D5E8200AF0D34 /* InboxView.swift in Sources */,
 				2EA20503251F81F800853D9F /* DashboardView.swift in Sources */,
